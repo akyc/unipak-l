@@ -1,0 +1,281 @@
+@import config
+
+.btn
+    border-radius: 3px
+    outline: none
+input
+    font-family: $akrobat
+.section-title
+    font-family: $akrobat
+    text-transform: uppercase
+header
+    background: #ffffff
+    font-family: $akrobat
+    .logo
+        display: block
+        color: #002f55
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 2rem
+        font-weight: 900
+        letter-spacing: .05em
+        background: url(../images/dest/logo-1.png) no-repeat center center
+        background-size: contain
+        height: 124px
+        line-height: 124px
+        span
+            background: #fff
+    .header-inner-top
+        .sub-menu
+            a
+                text-decoration: none
+                color: #333333
+                padding: 0 17px
+                font-weight: 700
+                letter-spacing: .15em
+                text-transform: uppercase
+                height: 60px
+                border: none
+                line-height: 60px
+                font-size: .9rem
+                &.btn
+                    color: #ffffff
+                    border-radius: 0 0 3px 3px
+                    &:hover
+                        color: #ffffff
+                        text-shadow: 0 2px 0 $secondary
+                &:hover
+                    color: #0084f0
+    .header-inner-bottom
+        .main-menu
+            a
+                text-decoration: none
+                color: #333333
+                padding: 15px 17px
+                font-weight: 700
+                letter-spacing: .15em
+                text-transform: uppercase
+                margin: 0 5px
+                &:hover
+                    background: #f1f4fb
+                &.active
+                    background: $primary-bg
+                    color: $primary
+            li:last-child a
+                margin-right: 0c
+.wellcome
+    z-index: 50
+    position: relative
+    width: 100%
+    height: 585px
+    background: #ffffff
+    &::after
+        content: ""
+        position: absolute
+        right: 0
+        bottom: -5px
+        display: block
+        background: transparent
+        width: 0
+        height: 0
+        border-color: transparent transparent transparent #ffffff
+        border-style: solid
+        border-width: 100px 0 0 1920px
+        z-index: 5
+    .video-container
+        max-width: 1600px
+        margin: 0 auto
+        position: relative
+        padding: 0 25px!important
+    .wellcome-video
+        width: calc(100% - 30px)
+        height: 590px
+        z-index: 1
+        object-fit: cover
+        position: absolute
+        left: 15px
+        top: 0
+    .wellcome-background
+        width: calc(100% - 30px)
+        height: 590px
+        z-index: 2
+        position: absolute
+        left: 15px
+        top: 0
+        background: #00050ea6
+    .wellcome-content
+        .row
+            position: relative
+            z-index: 10
+            height: 100%
+            h1
+                color: #ffffff
+                padding-top: 85px
+                font-size: 2.2rem
+                font-weight: 900
+            p
+                color: #ffffff
+                font-weight: 500
+            .btn
+                color: #ffffff
+                text-transform: uppercase
+                padding: 0 25px
+                line-height: 50px
+                font-family: $akrobat
+                letter-spacing: .05em
+                font-size: .9rem
+                margin-top: 35px
+                font-weight: 600
+                &:hover
+                    box-shadow: 0 10px 25px -10px #4a91e27c 
+.advantages
+    z-index: 50
+    display: flex
+    margin-top: -180px
+    position: relative
+    a
+        color: #333333
+        &:hover
+            text-decoration: none
+    .advitem
+        background: $primary-bg
+        border-radius: 3px
+        padding: 40px 30px 30px
+        margin: 0 15px
+        min-height: 400px
+        height: 100%
+        border: 2px solid #ffffff
+        transition: .65s
+        &:hover
+            border: 2px solid $primary
+            box-shadow: 0px 4px 26px rgba(72, 72, 73, 0.15)
+            .feather
+                color: $primary
+                transform: translateX(15px)
+        &-title
+            font-size: 30px
+            margin-top: 10px
+            margin-bottom: 20px
+            color: $secondary
+            font-weight: 600
+            line-height: 30px
+        .feather
+            color: $primary-bg
+            transition: .5s
+.production
+    .product-grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: px
+        row-gap: 1px
+        min-height: 400px
+        &-item
+            background: $primary-bg
+            &:first-child, &:nth-child(6)
+                grid-row: span 2
+                grid-column: span 2
+            &:nth-child(4), &:nth-child(5)
+                grid-column: span 2
+            &:hover
+                
+            a
+                padding: 25px
+                &:hover
+                    text-decoration: none
+            h3
+                text-decoration: none
+                color: #333333
+                padding: 0 17px
+                font-weight: 700
+                letter-spacing: .15em
+                text-transform: uppercase
+                height: 60px
+                border: none
+                line-height: 60px
+                font-size: 1.1rem
+.about-company
+    .controls
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: absolute
+        justify-content: center
+        background: #ffffff
+        bottom: 0
+        right: 0
+        z-index: 1010
+    .swbutton
+        padding: 0
+        border: 0
+        background: #ffffff
+        width: 64px
+        height: 64px
+    .delaybox
+        width: 64px
+        flex-direction: column-reverse
+        flex: none
+        padding: 32px 0
+        display: flex
+        align-items: center
+        justify-content: center
+    .counter
+        transform: rotate(-90deg)
+        font-size: 12px
+        letter-spacing: .07em
+    .progress
+        width: 1px
+        height: 64px
+        min-height: 64px
+        margin: 0
+        margin-top: 8px
+        margin-bottom: 8px
+        flex: 1
+        transform: translateY(1px)
+        position: relative 
+        background-color: $primary-bg
+        &-line
+            height: 0
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            background: $primary
+            transition: all 0.1s
+footer
+    .footer_main
+        border-top: 1px solid #f5f5f5
+        .list-title
+            font-family: $akrobat
+            padding: 0 17px
+            font-weight: 700
+            letter-spacing: .15em
+            text-transform: uppercase
+            height: 60px
+            border: none
+            line-height: 60px
+            font-size: .9rem
+        ul
+            list-style: none
+            margin-left: 0
+            padding-left: 17px
+            li
+                a
+                    color: #333333
+    .footer-bottom
+        position: relative
+        border-top: 1px solid #EEF2F1
+    .js-up
+        position: absolute
+        background-color: #fff
+        border: 1px solid #EEF2F1
+        color: $primary
+        border-radius: 50%
+        left: 50%
+        transform: translateX(-50%)
+        width: 40px
+        height: 40px
+        top: -20px
+        outline: none
+        &:hover
+            border: 1px solid $primary
+            color: $secondary

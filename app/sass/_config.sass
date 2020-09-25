@@ -1,0 +1,77 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$kievit: 'Kievit', sans-serif
+$akrobat: 'Akrobat', sans-serif  
+$enable-rounded : true
+$primary: #0084f0
+$secondary: #002f55
+$primary-bg: #f1f4fb
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1370px, xxl: 1400px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1310px, xxl: 1600px)
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import 'node_modules/bootstrap/scss/bootstrap'
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff')
+
+@include font('Kievit', normal, 100, '../fonts/KievitPro/KievitPro-ExtraLight.woff')
+@include font('Kievit', normal, 200, '../fonts/KievitPro/KievitPro-Light.woff')
+@include font('Kievit', normal, 300, '../fonts/KievitPro/KievitPro-Book.woff')
+@include font('Kievit', normal, 400, '../fonts/KievitPro/KievitPro-Regular.woff')
+@include font('Kievit', italic, 400, '../fonts/KievitPro/KievitPro-Italic.woff')
+@include font('Kievit', normal, 500, '../fonts/KievitPro/KievitPro-Medium.woff')	
+@include font('Kievit', normal, 700, '../fonts/KievitPro/KievitPro-Bold.woff')	
+@include font('Kievit', normal, 800, '../fonts/KievitPro/KievitPro-ExtraBold.woff')
+@include font('Kievit', normal, 900, '../fonts/KievitPro/KievitPro-Black.woff')
+
+@include font('Akrobat', normal, 100, '../fonts/Akrobat/Akrobat-ExtraLight.woff')
+@include font('Akrobat', normal, 200, '../fonts/Akrobat/Akrobat-Light.woff')
+@include font('Akrobat', normal, 400, '../fonts/Akrobat/Akrobat-Regular.woff')
+@include font('Akrobat', normal, 500, '../fonts/Akrobat/Akrobat-SemiBold.woff')	
+@include font('Akrobat', normal, 700, '../fonts/Akrobat/Akrobat-Bold.woff')
+@include font('Akrobat', normal, 900, '../fonts/Akrobat/Akrobat-Black.woff')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $kievit
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor
